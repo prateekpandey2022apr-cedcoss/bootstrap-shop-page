@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/36a1ff03cb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+
+  <style>
+    .list-group-item {
+      border: none;
+
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      /* font-size: 100px; 
+    margin-top: -60px; */
+      /* margin-left: -50px; */
+      /* color: #fff;
+    background-color: black; */
+    }
+
+    .carousel-control-prev {
+      left: -110px;
+      /* border-bottom: 0; */
+      /* font-size: 40px; */
+      /* color: #444; */
+      /* color: #e3e3e3; */
+      /* background-color: #444; */
+    }
+
+    .carousel-control-next {
+      right: -110px;
+      /* border-bottom: 0; */
+      /* font-size: 40px; */
+      /* color: #444; */
+      /* color: #e3e3e3; */
+      /* background-color: #444; */
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      color: #fff;
+      background-color: darkgray;
+    }
+
+    .footer {
+      color: #777373;
+      font-weight: 500;
+    }
+
+    .footer h4 {
+      color: rgb(40, 39, 39);
+    }
+
+    .footer-icons a {
+      color: #e3e3e3;
+      margin-right: 0.5rem;
+    }
+
+    .footer-links li {
+      margin: 0.6rem 0;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #777373;
+    }
+
+    .subscribe {
+      background-color: #e3e3e3;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .footer {
+      margin: 2.5rem 0;
+    }
+
+    .search-form {
+      width: 450px;
+      margin-left: 40px;
+    }
+
+    .search-form input {
+      border: 1px solid rgba(35, 47, 85, 0.15);
+      border-radius: 30px;
+      padding: 10px 20px;
+      width: 100%;
+      height: 50px;
+    }
+
+    .header a {
+      text-decoration: none;
+    }
+
+    .header .header-right ul li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    .row.featured {
+      background-color: red;
+      padding: 2rem;
+      color: #fff;
+    }
+
+    .featured button{
+      border: 1px solid #fff;
+    }
+
+    .header a, .navigation a{
+      text-decoration: none;
+      color: #777373;
+      font-weight: 500;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row mt-5 mb-3 m header">
+      <div class="col-lg-12">
+        <div class="d-flex justify-content-between align-items-center flex-sm">
+          <div class="header-left d-flex justify-content-between align-items-center">
+            <div>
+              <a class="" href="#">
+                <img src="./images/book.png" alt="" width="30" height="24">
+                ABC Book
+              </a>
+            </div>
+            <form class="search-form">
+
+              <input type="input" name="search" id="search" placeholder="Search Book by Author or Publisher">
+
+            </form>
+          </div>
+          <div class="header-right d-flex justify-content-between align-items-center">
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Track Order</a></li>
+              <li class="shopping-card position-relative">
+                <a href="cart.html">
+                  <i class="bi bi-cart"></i>
+                </a>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+                </span>
+              </li>
+              <li><a href="login.html" class="btn btn-danger rounded-pill text-white">Sign in</a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="container navigation">
+
+    <div class="row mb-3">
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item"><a class="text-decoration-none" href="#">Home</a></li>
+        <li class="list-group-item"><a class="text-decoration-none" href="#">Categories</a></li>
+        <li class="list-group-item"><a class="text-decoration-none" href="#">About</a></li>
+        <li class="list-group-item"><a class="text-decoration-none" href="#">Pages</a></li>
+        <li class="list-group-item"><a class="text-decoration-none" href="#">Blog</a></li>
+        <li class="list-group-item"><a class="text-decoration-none" href="#">Contant</a></li>
+      </ul>
+    </div>
+
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide mb-3" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/la.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/chicago.jpg" alt="Chicago" class="d-block" style="width:100%">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/ny.jpg" alt="New York" class="d-block" style="width:100%">
+        </div>
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <div class="row mt-5">
+      <p class="h2 text-center">Best Selling Books Ever</p>
+    </div>
+
+
+    <div class="row mb-3">
+
+      <!-- <div class="col-6 text-right">
+              <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                <i class="fa fa-arrow-left"></i>
+              </a>
+              <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div> -->
+
+      <!-- <div class="col-1 d-flex">
+              <button class="btn btn-outline-secondary  mb-3" href="#carouselExampleIndicators2"
+               role="button" data-bs-slide="prev">
+                <i class="fa fa-arrow-left"></i>
+              </button>
+            </div> -->
+
+      <div class="col-12">
+        <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+
+                <div class="col-md-3 mb-3">
+
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+
+
+                </div>
+
+
+                <div class="col-md-3 mb-3">
+
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+
+
+                </div>
+                <div class="col-md-3 mb-3">
+
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-3 mb-3">
+
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="carousel-item">
+              <div class="row">
+
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-3">
+
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-3 mb-3">
+
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-3 mb-3">
+
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <div class="card">
+                    <div class="img-wrapper">
+                      <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Moon Dance</h6>
+                      <p class="text-muted">JR Rain</p>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                      <span class='bi bi-star-half' style='color: #ff0000'></span>
+                      <p class="text-muted">120 Reviews
+                        <span class="float-end text-danger h5">$50</span>
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+          <button class="carousel-control-prev text-light" type="button" data-bs-target="#carouselExampleIndicators2"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon text-light" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next text-light" type="button" data-bs-target="#carouselExampleIndicators2"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon text-light" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- <div class="col-1 d-flex">
+
+            <button class="btn btn-outline-secondary  mb-3" href="#carouselExampleIndicators2" role="button" data-bs-slide="next">
+              <i class="fa fa-arrow-right"></i>
+            </button>
+            
+          </div> -->
+    </div>
+
+
+    <!-- <div class="d-flex justify-content-end">  
+          <div class="h2 p-2">Flex item</div>    
+          <div class="ms-auto p-2">
+            <a href="#" class="btn bg-light">View All</a>
+          </div>  
+        </div> -->
+
+
+    <div class="row mb-3">
+      <div class="col-9">
+        <div class="d-flex justify-content-end">
+          <div class="h2 p-2">Featured this Week</div>
+          <div class="ms-auto p-2">
+            <a href="#" class="btn bg-light">View All</a>
+          </div>
+        </div>
+
+        <div class="row featured">
+          <div class="col-6">
+            <p><img src="images/img_1.png" width="300" class="img-fluid" alt=""></p>
+          </div>
+          <div class="col-6">
+            <p>
+              <span class="h3">The Rage of Dragons </span> <br> <small>By Evan Winter</small>
+            </p>
+
+            <p class="h4">$50</p>
+
+            <p class="rating">
+              <!-- <span class="mb-4">$50</span> -->
+              <span class='bi bi-star-fill'></span>
+              <span class='bi bi-star-fill'></span>
+              <span class='bi bi-star-fill'></span>
+              <span class='bi bi-star-fill'></span>
+              <span class='bi bi-star-half'></span>
+              <small><span>(120 Reviews)</span></small>
+            </p>
+
+            <p class="">
+              <button class="btn btn-danger rounded-pill">View Details</button>
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col">
+        <p><img src="images/img_2.png" class="img-fluid" alt=""></p>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <p class="h3">Latest Published items</p>
+      </div>
+      <div class="col">
+        <div class="d-flex justify-content-end">
+          <div class="p-2 bd-highlight btn btn-danger">All</div>
+          <div class="p-2 bd-highlight">Horror</div>
+          <div class="p-2 bd-highlight">Thriller</div>
+          <div class="p-2 bd-highlight">Science Fiction</div>
+          <div class="p-2 bd-highlight">History</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="row mb-3">
+
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+
+            <div class="col-md-3 mb-3">
+
+              <div class="card">
+                <div class="img-wrapper">
+                  <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                </div>
+                <div class="card-body">
+                  <h6 class="card-title">Moon Dance</h6>
+                  <p class="text-muted">JR Rain</p>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-half' style='color: #ff0000'></span>
+                  <p class="text-muted">120 Reviews
+                    <span class="float-end text-danger h5">$50</span>
+                  </p>
+
+                </div>
+              </div>
+
+
+            </div>
+
+
+            <div class="col-md-3 mb-3">
+
+              <div class="card">
+                <div class="img-wrapper">
+                  <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                </div>
+                <div class="card-body">
+                  <h6 class="card-title">Moon Dance</h6>
+                  <p class="text-muted">JR Rain</p>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-half' style='color: #ff0000'></span>
+                  <p class="text-muted">120 Reviews
+                    <span class="float-end text-danger h5">$50</span>
+                  </p>
+
+                </div>
+              </div>
+
+
+            </div>
+            <div class="col-md-3 mb-3">
+
+              <div class="card">
+                <div class="img-wrapper">
+                  <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                </div>
+                <div class="card-body">
+                  <h6 class="card-title">Moon Dance</h6>
+                  <p class="text-muted">JR Rain</p>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-half' style='color: #ff0000'></span>
+                  <p class="text-muted">120 Reviews
+                    <span class="float-end text-danger h5">$50</span>
+                  </p>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-3 mb-3">
+
+              <div class="card">
+                <div class="img-wrapper">
+                  <img src="https://via.placeholder.com/300x200" class="img-fluid" alt="...">
+                </div>
+                <div class="card-body">
+                  <h6 class="card-title">Moon Dance</h6>
+                  <p class="text-muted">JR Rain</p>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-fill' style='color: #ff0000'></span>
+                  <span class='bi bi-star-half' style='color: #ff0000'></span>
+                  <p class="text-muted">120 Reviews
+                    <span class="float-end text-danger h5">$50</span>
+                  </p>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <!-- end of carapousel -->
+
+    <div class="row mb-3">
+      <p class="text-center">
+        <button class="btn btn-large btn-danger rounded-pill ">Browse More</button>
+      </p>
+    </div>
+
+    <div class="d-flex mb-3 justify-content-between">
+      <div>
+        <p class="position-relative">
+          <img src="https://via.placeholder.com/500x300" class="img-fluid" alt="">
+          <button class="btn btn-danger position-absolute bottom-0 start-50 translate-middle">View Details</button>
+        </p>
+
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptas tempora facilis similique libero aliquid eaque quia corporis rem nulla numquam provident maiores excepturi, architecto vero, obcaecati veniam omnis hic.</p> -->
+      </div>
+      <div>
+        <p class="position-relative">
+          <img src="https://via.placeholder.com/500x300" class="img-fluid" alt="">
+          <button class="btn btn-danger position-absolute bottom-0 start-50 translate-middle">View Details</button>
+        </p>
+
+      </div>
+    </div>
+
+
+    <div class="subscribe">
+      <div class="row mx-auto mb-3" style="width: 80%;">
+
+        <div class="col text-center">
+
+          <p class="h2">Join Newsletter</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quae blanditiis, sit est aliquid sapiente
+            autem
+            cum soluta aliquam, culpa nam necessitatibus quisquam adipisci? Aut placeat fugit molestiae aspernatur
+            illum?
+          </p>
+
+          <form class="row g-3 justify-content-center ">
+            <div class="col-auto">
+              <label for="staticEmail2" class="visually-hidden">Email</label>
+              <input type="text" class="form-control " id="staticEmail2" value="" placeholder="Enter an email">
+            </div>
+
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Subscribe</button>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="row justify-content-between">
+        <div class="col">
+          <p><img src="images/abc-book.png" alt=""></p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, labore.</p>
+          <div class="footer-icons">
+            <a href="#"><i class="bi bi-facebook fa-2x"></i></a>
+            <a href=""><i class="bi bi-instagram fa-2x"></i></a>
+            <a href="#"><i class="bi bi-linkedin fa-2x"></i></a>
+            <a href="#"><i class="bi bi-youtube fa-2x"></i></a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="footer-links">
+            <h4>Book Category</h4>
+            <ul>
+              <li><a href="#">History</a></li>
+              <li><a href="#">History-thriller</a></li>
+              <li><a href="#">Love Stories</a></li>
+              <li><a href="#">Science Fiction</a></li>
+              <li><a href="#">Business</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="footer-links">
+            <h4>&nbsp;</h4>
+            <ul>
+              <li><a href="#">Biography</a></li>
+              <li><a href="#">Astrology</a></li>
+              <li><a href="#">Digital Marketing</a></li>
+              <li><a href="#">Software Development</a></li>
+              <li><a href="#">Ecommerce</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="footer-links">
+            <h4>Sitemap</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+  <!-- <div class="d-flex justify-content-between">
+      <p>item</p>
+      <p>item</p>
+      <p>item</p>
+      <p>item</p>
+      <p>item</p>
+
+    </div> -->
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <!-- <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+
+</body>
+
+</html>
